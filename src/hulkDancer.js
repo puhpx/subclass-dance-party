@@ -3,6 +3,11 @@ var makeHulkDancer = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class="hulkDancer"><img src="pic/hulk.png" alt="Hulk" width="50" height="50"></span>');
   this.$node = $('<span class="hulkDancer"></span>');
   this.setPosition(top, left);
+  $(".hulkDancer").hover(function(event){
+    $(event.target).attr('height', );
+  }, function(event){
+    $(event.target).attr('height', 50px);
+  });
 };
 
 makeHulkDancer.prototype = Object.create(makeDancer.prototype);

@@ -3,6 +3,11 @@ var makeIronmanDancer = function(top, left, timeBetweenSteps) {
   // this.$node = $('<span class="ironmanDancer"></span>');
   this.$node = $('<span class="ironmanDancer"> <img src="pic/ironman.png" alt="Iron Man" width="80" height="80"></span>');
   this.setPosition(top, left);
+  $(".ironmanDancer").hover(function(event){
+    $(event.target).attr('src', "pic/ironman_nohelmet.PNG");
+  }, function(event){
+    $(event.target).attr('src', "pic/ironman.PNG");
+  });
 };
 
 makeIronmanDancer.prototype = Object.create(makeDancer.prototype);
@@ -18,4 +23,5 @@ makeIronmanDancer.prototype.step = function() {
     //   width: '+=30px',
     //   height: '+=30px',
     // }, 1000);
-}
+};
+

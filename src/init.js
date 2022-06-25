@@ -33,9 +33,50 @@ $(document).ready(function() {
 
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].setPosition(100,0+(i*100));
+      window.dancers[i].setPosition(100,(i*100));
       // window.dancers[i].lineUp();
     }
   });
+
+  $('.interactButton').on('click', function() {
+    if(window.dancers.length >=2) {
+      var dancersArr = window.dancers.splice();
+      var pair1;
+      var pair2;
+      for (i = 0; i < dancersArr.length; i++) {
+        var currentDancer = dancersArr[i];
+
+        //compare currentDancer's position against all other, and find the closest dancer, then remove that dancer
+        var shortestDistance = +Infinity;
+        for(j = 0; j < dancersArr.length; j++) {
+          if (j !== i) {
+            var distance = Math.sqrt((Math.abs(dancerArr[i].top - dancerArr[j].top))**2 + (Math.abs(dancerArr[i].left - dancerArr[j].left))**2);
+            if(distance < shortestDistance) {
+              shortestDistance = distance;
+              pair1 = currentDancer;
+              pair2 = darcerArr[j];
+              // partner.setPosition(currentDancer.top, currentDancer.left);
+            }
+          }
+        }
+      }
+    // currentDancer.top = partner.top;
+    // currentDancer.left = partner.left + 10;
+    // dancersArr[i].setPosition(darcerArr[j].top, darcerArr[j].left);
+    }
+    pair1.setPosition(pair2.top, pair2.left);
+  });
+
+  // $('.ironmanDancer').on('mouseover', function(event) {
+    $(".ironmanDancer").hover(function(event){
+      $(event.target).attr('src', "pic/ironman_nohelmet.PNG");
+    })
+  // })
+
+  // $("#ironmanDancer").hover(function(){
+  //   this.$node.attr("src", "pic/ironman_nohelmet.PNG");
+  //   // this.$node.append('<img src="pic/flame-icon.png">');
+  //   })
 });
+
 
