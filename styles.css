@@ -3,7 +3,9 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url("pic/DancingFloor.jpg");
+  background-size: 100%;
+  background-position: center;
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -24,4 +26,21 @@ body, a:link, a:visited, a:active{
   border:10px solid red;
   border-radius:10px;
   position:absolute;
+}
+
+.blinkyDancer{
+  border:10px solid rgb(23, 20, 122);
+  border-radius:10px;
+  position:absolute;
+}
+
+.hulkDancer{
+  position:absolute;
+  content:url(pic/hulk.png);
+  height: 50px;
+  width: 50px;
+}
+
+.ironmanDancer{
+  position:fixed;
 }
