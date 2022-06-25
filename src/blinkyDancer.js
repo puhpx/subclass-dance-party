@@ -18,20 +18,19 @@
 //   return blinkyDancer;
 // };
 
-var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
+var makeIronmanDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps); //inheritance
   // makeDancer.prototype.step();
 };
 
 //Created the prototype and constructor
-makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);
-makeBlinkyDancer.prototype.constructor = makeBlinkyDancer;
+makeIronmanDancer.prototype = Object.create(makeDancer.prototype);
+makeIronmanDancer.prototype.constructor = makeIronmanDancer;
 
-makeBlinkyDancer.prototype.step = function() {
+makeIronmanDancer.prototype.step = function() {
     // call the old version of step at the beginning of any call to this new version of step
     makeDancer.prototype.step.call(this);  //just want to invoke
-    // Why use call here?
-    //
+    // Why use call here? Call used on a method will invoke the method with "this"
     // toggle() is a jQuery method to show/hide the <span> tag.
     // See http://api.jquery.com/category/effects/ for this and
     // other effects you can use on a jQuery-wrapped html tag.
