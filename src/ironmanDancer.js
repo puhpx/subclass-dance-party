@@ -1,7 +1,7 @@
 var makeIronmanDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   // this.$node = $('<span class="ironmanDancer"></span>');
-  this.$node = $('<span class="ironmanDancer"> <img src="pic/ironman.png" alt="Iron Man" width="150" height="150"></span>');
+  this.$node = $('<span class="ironmanDancer"> <img src="pic/ironman.png" alt="Iron Man" width="80" height="80"></span>');
   this.setPosition(top, left);
 };
 
