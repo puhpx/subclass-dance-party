@@ -2,6 +2,11 @@ var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
   this.$node = $('<span class="blinkyDancer"></span>');
   this.setPosition(top, left);
+  $('.blinkyDancer').click(function(event) {
+    var back = ['#ff0000', 'blue', 'gray'];
+    var rand = back[Math.floor(Math.random() * back.length)];
+    $(event.target).css('border-color', rand);
+  });
 };
 
 makeBlinkyDancer.prototype = Object.create(makeDancer.prototype);

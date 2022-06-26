@@ -33,9 +33,6 @@ $(document).ready(function() {
 
   $('.lineUpButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      if (window.dancers[i] === 'makeIronmanDancer') {
-        window.dancers[i].top = 450;
-      }
       window.dancers[i].setPosition(400, (i * 100));
       // window.dancers[i].lineUp();
     }
