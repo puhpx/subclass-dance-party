@@ -1,12 +1,11 @@
 var makeIronmanDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  // this.$node = $('<span class="ironmanDancer"></span>');
-  this.$node = $('<span class="ironmanDancer"> <img src="pic/ironman.png" alt="Iron Man" width="80" height="80"></span>');
+  this.$node = $('<span class="ironmanDancer"> <img src="pic/ironman.png" alt="Iron Man" width="100" height="100"></span>');
   this.setPosition(top, left);
-  $(".ironmanDancer").hover(function(event){
-    $(event.target).attr('src', "pic/ironman_nohelmet.PNG");
-  }, function(event){
-    $(event.target).attr('src', "pic/ironman.PNG");
+  $('.ironmanDancer').hover(function(event) {
+    $(event.target).attr('src', 'pic/ironman_nohelmet.PNG');
+  }, function(event) {
+    $(event.target).attr('src', 'pic/ironman.PNG');
   });
 };
 
@@ -14,14 +13,12 @@ makeIronmanDancer.prototype = Object.create(makeDancer.prototype);
 makeIronmanDancer.prototype.constructor = makeIronmanDancer;
 
 makeIronmanDancer.prototype.step = function() {
-    makeDancer.prototype.step.call(this);
-    this.$node.animate({
-      height: 'toggle'
-    }, 1000);
-    // this.$node.toggle();
-    // this.$node.animate({
-    //   width: '+=30px',
-    //   height: '+=30px',
-    // }, 1000);
+  makeDancer.prototype.step.call(this);
+  this.$node.animate({
+    top: '-=30'
+  }, 1000);
+  this.$node.animate({
+    top: '+=30',
+  }, 2000);
 };
 
