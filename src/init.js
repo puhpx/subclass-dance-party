@@ -25,7 +25,7 @@ $(document).ready(function() {
     var dancer = new dancerMakerFunction(
       $('body').height() * Math.random(),
       $('body').width() * Math.random(),
-      Math.random() * 1000
+      Math.random() * 500
     );
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
@@ -40,7 +40,7 @@ $(document).ready(function() {
 
   $('.breakLineButton').on('click', function(event) {
     for (var i = 0; i < window.dancers.length; i++) {
-      window.dancers[i].setPosition(Math.random() * 1000, Math.random() * 1000);
+      window.dancers[i].setPosition(Math.random() * 800, Math.random() * 1800);
     }
   });
 

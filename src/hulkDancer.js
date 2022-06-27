@@ -5,9 +5,9 @@ var makeHulkDancer = function(top, left, timeBetweenSteps) {
   this.setPosition(top, left);
   $('.hulkDancer').hover(function() {
     this.animate({
-      height: '200px',
-      width: '200px'
-    }, 1000);
+      height: '220px',
+      width: '220px'
+    }, 300);
   }, function() {
     this.animate({
       height: '80px',

@@ -30,7 +30,7 @@ body, a:link, a:visited, a:active{
 }
 
 .blinkyDancer{
-  border:40px solid;
+  border:30px solid;
   border-color: rgb(196, 57, 175);
   border-radius:10px;
   position:absolute;
